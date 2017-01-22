@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Entity Relationship</title>
+<meta name="description" content="Interactive entity-relationship diagram or data model diagram implemented by GoJS in JavaScript for HTML." />
+<!-- Copyright 1998-2016 by Northwoods Software Corporation. -->
+<meta charset="UTF-8">
+<script src="js/go.js"></script>
+<script id="code" src="js/diagram.js">  
+</script>
+<style type="text/css">
+.draggable {
+  display: inline-block;
+  vertical-align: top;
+  border: 4px solid #BBB;
+  border-radius: 4px;
+  background-color: #F5F5F5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 200px;
+  height: 300px;
+  z-index: 500;
+}
+.handle {
+  background-color: lightblue;
+  cursor: move;
+  text-align: center;
+  font: bold 12px sans-serif;
+}
+
+#myPaletteDiv {
+  background-color: #F5F5F5;
+  width: 100%;
+  height: 100%;
+}
+/*
+One simple way of making a div fill its space,
+with allowances for the title (top) and the resize handle (bottom)
+*/
+#paletteContainer {
+  position:absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  top: 14px;
+}
+</style>
+</head>
+<body onload="init()">
+<div id="sample">
+  <div id="paletteDraggable" class="draggable" style="height: 300px;">
+    <div id="paletteDraggableHandle" class="handle">Palette</div>
+    <div id="paletteContainer">
+      <div id="myPaletteDiv"></div>
+    </div>
+  </div>
+  <div id="myDiagramDiv" style="background-color: white; border: solid 1px black; position:absolute;top:0;bottom:0;left:210px;right:0;"></div>
+</div>
+</body>
+</html>

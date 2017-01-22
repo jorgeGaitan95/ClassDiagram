@@ -1,0 +1,31 @@
+{
+  "nodedata" : [
+  {
+    "key": 1,
+    "name": "BankAccount",
+    "properties": [
+      { "name": "owner", "type": "String", "visibility": "public" },
+      { "name": "balance", "type": "Currency", "visibility": "public", "default": "0" }
+    ],
+    "methods": [
+      { "name": "deposit", "parameters": [{ "name": "amount", "type": "Currency" }], "visibility": "public" },
+      { "name": "withdraw", "parameters": [{ "name": "amount", "type": "Currency" }], "visibility": "public" }
+    ]
+  },
+  {
+    "key": 2,
+    "name": "Prueba",
+    "properties": [
+      { "name": "owner", "type": "String", "visibility": "public" },
+      { "name": "balance", "type": "Currency", "visibility": "public", "default": "0" }
+    ],
+    "methods": [
+      { "name": "deposit", "parameters": [{ "name": "amount", "type": "Currency" }], "visibility": "public" },
+      { "name": "withdraw", "parameters": [{ "name": "amount", "type": "Currency" }], "visibility": "public" }
+    ]
+  }
+],
+"linkdata" : [
+  { "from": 1, "to": 2, "relationship": "generalization" }
+]
+}
